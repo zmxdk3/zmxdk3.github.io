@@ -47,12 +47,19 @@
 
   
   <url>
-    <loc>https://zmxdk3.github.io/tags/%E7%94%9F%E6%B4%BB%EF%BC%8C%E9%9A%8F%E7%AC%94/</loc>
+    <loc>https://zmxdk3.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2023-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://zmxdk3.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2023-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
