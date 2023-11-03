@@ -6,7 +6,7 @@
   <link href="https://zmxdk3.github.io/atom.xml" rel="self"/>
   
   <link href="https://zmxdk3.github.io/"/>
-  <updated>2023-11-03T08:20:20.736Z</updated>
+  <updated>2023-11-01T05:40:21.941Z</updated>
   <id>https://zmxdk3.github.io/</id>
   
   <author>
@@ -15,23 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试</title>
-    <link href="https://zmxdk3.github.io/2023/11/01/%E6%B5%8B%E8%AF%95/"/>
-    <id>https://zmxdk3.github.io/2023/11/01/%E6%B5%8B%E8%AF%95/</id>
-    <published>2023-11-01T13:36:05.323Z</published>
-    <updated>2023-11-03T08:20:20.736Z</updated>
-    
-    
-    
-    
-    <category term="测试" scheme="https://zmxdk3.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-    <category term="测试" scheme="https://zmxdk3.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
   
   <entry>
     <title>Hello World</title>
