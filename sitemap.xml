@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://zmxdk3.github.io/tags/index.html</loc>
+    <loc>https://zmxdk3.github.io/2023/11/03/%E6%B5%8B%E8%AF%951/</loc>
     
     <lastmod>2023-11-03</lastmod>
     
@@ -20,9 +20,9 @@
   </url>
   
   <url>
-    <loc>https://zmxdk3.github.io/2023/11/01/hello-world/</loc>
+    <loc>https://zmxdk3.github.io/tags/index.html</loc>
     
-    <lastmod>2023-11-01</lastmod>
+    <lastmod>2023-11-03</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -37,6 +37,27 @@
   </url>
 
   
+  <url>
+    <loc>https://zmxdk3.github.io/tags/Linux/</loc>
+    <lastmod>2023-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zmxdk3.github.io/tags/C-C/</loc>
+    <lastmod>2023-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://zmxdk3.github.io/categories/Linux/</loc>
+    <lastmod>2023-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
