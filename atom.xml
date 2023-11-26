@@ -6,7 +6,7 @@
   <link href="https://zmxdk3.github.io/atom.xml" rel="self"/>
   
   <link href="https://zmxdk3.github.io/"/>
-  <updated>2023-11-03T11:43:47.622Z</updated>
+  <updated>2023-11-26T13:37:04.483Z</updated>
   <id>https://zmxdk3.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用anaconda的基本操作</title>
+    <link href="https://zmxdk3.github.io/2023/11/26/anaconda%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/"/>
+    <id>https://zmxdk3.github.io/2023/11/26/anaconda%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</id>
+    <published>2023-11-26T13:38:50.106Z</published>
+    <updated>2023-11-26T13:37:04.483Z</updated>
+    
+    <content type="html"><![CDATA[<p>如何使用anaconda配置自己的python环境?如果你想多个项目使用不同版本的python和不同的库，可以选择去使用anaconda，</p><p>查看所有的虚拟环境（默认会有一个base，安装的虚拟环境一般会在anaconda安装目录下的envs目录下）：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env list #使用这条指令查找所创建的所有虚拟环境</span><br></pre></td></tr></table></figure><p>创建环境：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conda create -n name python=3.9</span><br><span class="line">// name: 打算配置的环境的名字</span><br><span class="line">// 后面python版本根据自己的需求选择</span><br><span class="line">// 比如我打算创建一个用于数据分析的python环境,使用3.9版本的python，就可以使用下面这条指令</span><br><span class="line">// conda create -n dataAnalysis python=3.9</span><br></pre></td></tr></table></figure><p>激活环境（我也不知道为啥大家都叫这个名，我更想叫他切换环境）：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">activate name</span><br><span class="line">// name: 打算切换到的环境的名字</span><br></pre></td></tr></table></figure><p>查看该虚拟环境的所有配置库</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list</span><br></pre></td></tr></table></figure><p>给指定环境安装包</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">activate name # 切换到指定环境</span><br><span class="line">conda install bname # bname是包的名字</span><br></pre></td></tr></table></figure><p>如果觉得下载比较慢可以换国内源（清华源经常出现ssh证书问题，导致无法下载）:</p><p>首先使用下面这条命令，然后在自己电脑的用户文件下可以找到一个.condarc文件，使用记事本打开这个文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --set show_channel_urls yes</span><br></pre></td></tr></table></figure><p>然后在文件中输入（这是上海交大的源）：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br><span class="line">show_channel_urls: true</span><br><span class="line">channel_alias: https://anaconda.mirrors.sjtug.sjtu.edu.cn/</span><br><span class="line">default_channels:</span><br><span class="line">  - https://anaconda.mirrors.sjtug.sjtu.edu.cn/pkgs/main</span><br><span class="line">  - https://anaconda.mirrors.sjtug.sjtu.edu.cn/pkgs/free</span><br><span class="line">  - https://anaconda.mirrors.sjtug.sjtu.edu.cn/pkgs/mro</span><br><span class="line">  - https://anaconda.mirrors.sjtug.sjtu.edu.cn/pkgs/msys2</span><br><span class="line">  - https://anaconda.mirrors.sjtug.sjtu.edu.cn/pkgs/pro</span><br><span class="line">  - https://anaconda.mirrors.sjtug.sjtu.edu.cn/pkgs/r</span><br><span class="line">custom_channels:</span><br><span class="line">  conda-forge: https://anaconda.mirrors.sjtug.sjtu.edu.cn/conda-forge</span><br><span class="line">  soumith: https://anaconda.mirrors.sjtug.sjtu.edu.cn/cloud/soumith</span><br><span class="line">  bioconda: https://anaconda.mirrors.sjtug.sjtu.edu.cn/cloud/bioconda</span><br><span class="line">  menpo: https://anaconda.mirrors.sjtug.sjtu.edu.cn/cloud/menpo</span><br><span class="line">  viscid-hub: https://anaconda.mirrors.sjtug.sjtu.edu.cn/cloud/viscid-hub</span><br><span class="line">  atztogo: https://anaconda.mirrors.sjtug.sjtu.edu.cn/cloud/atztogo</span><br><span class="line">ssl_verify: true</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;如何使用anaconda配置自己的python环境?如果你想多个项目使用不同版本的python和不同的库，可以选择去使用anaconda，&lt;/p&gt;
+&lt;p&gt;查看所有的虚拟环境（默认会有一个base，安装的虚拟环境一般会在anaconda安装目录下的envs目录下）：&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="Python" scheme="https://zmxdk3.github.io/categories/Python/"/>
+    
+    <category term="深度学习" scheme="https://zmxdk3.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Python" scheme="https://zmxdk3.github.io/tags/Python/"/>
+    
+    <category term="深度学习" scheme="https://zmxdk3.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="anaconda" scheme="https://zmxdk3.github.io/tags/anaconda/"/>
+    
+  </entry>
   
   <entry>
     <title>测试</title>
