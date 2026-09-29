@@ -3,31 +3,31 @@ import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } fro
 export const theme: ThemeUserConfig = {
   // [Basic]
   /** Title for your website. Will be used in metadata and as browser tab title. */
-  title: 'Astro Theme Pure',
+  title: "Brain's Lab",
   /** Will be used in index page & copyright declaration */
-  author: 'Pure Lab',
+  author: 'Brain',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: 'Stay hungry, stay foolish',
+  description: 'Embodied AI, Computer Vision',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
-  favicon: '/favicon/favicon.ico',
+  favicon: 'public/favicon/favicon.ico',
   /** The default social card image for your site which should be a path to an image in the `public/` directory. */
   socialCard: '/images/social-card.png',
   /** Specify the default language for this site. */
   locale: {
-    lang: 'en-US',
-    attrs: 'en_US',
+    lang: 'zh-CN',
+    attrs: 'zh-CN',
     // Date locale
-    dateLocale: 'en-US',
+    dateLocale: 'en-CA',
     dateOptions: {
       day: 'numeric',
-      month: 'short',
-      year: 'numeric'
+      month: '2-digit',
+      year: '2-digit'
     }
   },
   /** Set a logo image to show in the homepage. */
   logo: {
-    src: '/src/assets/avatar.png',
-    alt: 'Avatar'
+    src: '/src/assets/brain.jpg',
+    alt: 'Brain'
   },
 
   titleDelimiter: '•',
@@ -49,9 +49,7 @@ export const theme: ThemeUserConfig = {
   header: {
     menu: [
       { title: 'Blog', link: '/blog' },
-      { title: 'Docs', link: '/docs' },
       { title: 'Projects', link: '/projects' },
-      { title: 'Links', link: '/links' },
       { title: 'About', link: '/about' }
     ]
   },
@@ -61,25 +59,12 @@ export const theme: ThemeUserConfig = {
     // Year format
     year: `© ${new Date().getFullYear()}`,
     // year: `© 2019 - ${new Date().getFullYear()}`,
-    links: [
-      // Registration link
-      {
-        title: 'Moe ICP 114514',
-        link: 'https://icp.gov.moe/?keyword=114514',
-        style: 'text-sm' // Uno/TW CSS class
-      },
-      // Privacy Policy link
-      {
-        title: 'Site Policy',
-        link: '/terms',
-        pos: 2 // position set to 2 will be appended to copyright line
-      }
-    ],
+    links: [],
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
     social: [
-      { icon: 'github', label: 'GitHub', href: 'https://github.com/cworld1/astro-theme-pure' },
+      { icon: 'github', label: 'GitHub', href: 'https://github.com/zmxdk3' },
       { icon: 'rss', label: 'RSS', href: '/rss.xml' }
     ]
   },
@@ -118,8 +103,8 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'https://astro-pure.js.org/' },
-      { name: 'Avatar', val: 'https://astro-pure.js.org/favicon/favicon.ico' }
+      { name: 'Link', val: 'https://zmxdk3.github.io/' },
+      { name: 'Avatar', val: 'https://zmxdk3.github.io/images/brain.jpg' }
     ],
     // Cache avatars in `public/avatars/` to improve user experience.
     cacheAvatar: false
@@ -163,24 +148,24 @@ export const integ: IntegrationUserConfig = {
   },
   // Comment system
   waline: {
-    enable: true,
+    enable: false,
     // Server service link
-    server: 'https://astro-theme-pure-waline.arthals.ink/',
+    // server: 'https://astro-theme-pure-waline.arthals.ink/',
     // Show meta info for comments
-    showMeta: false,
+    // showMeta: false,
     // Refer https://waline.js.org/en/guide/features/emoji.html
-    emoji: ['bmoji', 'weibo'],
+    // emoji: ['bmoji', 'weibo'],
     // Refer https://waline.js.org/en/reference/client/props.html
-    additionalConfigs: {
-      // search: false,
-      locale: {
-        nick: 'Name',
-        mail: 'Email',
-        login: 'Login (Optional)',
-        placeholder: 'Comment here... (Email to receive replies)',
-        reaction0: 'Like'
-      }
-    }
+    // additionalConfigs: {
+    //   // search: false,
+    //   locale: {
+    //     nick: 'Name',
+    //     mail: 'Email',
+    //     login: 'Login (Optional)',
+    //     placeholder: 'Comment here... (Email to receive replies)',
+    //     reaction0: 'Like'
+    //   }
+    // }
   }
 }
 
