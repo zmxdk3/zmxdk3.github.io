@@ -22,7 +22,7 @@ interface Props {
 }
 const { class: className, projects, ...props } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/projects/*.{jpeg,jpg,png,gif,avif.webp,webp}'
+  '/src/assets/projects/*.{jpeg,jpg,png,gif,avif,webp}'
 )
 const projectIconSet: Record<string, IconsType> = {
   github: 'github-circle',
@@ -33,10 +33,13 @@ const projectIconSet: Record<string, IconsType> = {
 ---
 
 <div class={className} {...props}>
-  <div class='grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 sm:gap-y-4'>
+  <div
+    class='grid gap-x-4 gap-y-3 sm:gap-y-4'
+    style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 20rem), 1fr))' }}
+  >
     {
       projects.map((project) => {
-        var imagePath = null
+        let imagePath = null
         if (project.image) {
           imagePath = '/src/assets/projects/' + project.image
           if (!images[imagePath])
@@ -46,7 +49,7 @@ const projectIconSet: Record<string, IconsType> = {
         }
 
         return (
-          <div class='relative overflow-hidden rounded-xl border'>
+          <article class='group relative overflow-hidden rounded-xl border bg-background transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md'>
             {imagePath && (
               <Image
                 class='absolute end-0 z-0 m-0 h-full w-1/2 object-cover opacity-40'
@@ -62,31 +65,28 @@ const projectIconSet: Record<string, IconsType> = {
                 }}
               />
             )}
-            <div
-              class={cn(
-                'relative z-10 flex flex-col gap-y-1 px-2 py-1.5 sm:px-3 sm:py-2',
-                imagePath && 'me-20'
-              )}
-            >
+            <div class={cn('relative z-10 flex flex-col gap-y-2 p-4', imagePath && 'me-20')}>
               <a
-                class='line-clamp-1 font-medium text-foreground no-underline transition-colors'
+                class='line-clamp-1 font-medium text-foreground no-underline transition-colors group-hover:text-primary'
                 href={project.links[0].href}
                 target='_blank'
+                rel='noreferrer'
               >
                 {project.name}
               </a>
-              <div class='line-clamp-2 leading-snug text-muted-foreground sm:h-12'>
+              <p class='m-0 line-clamp-2 min-h-10 leading-snug text-muted-foreground'>
                 {project.description}
-              </div>
-              <div class='flex flex-row items-center gap-x-2 sm:gap-x-3'>
+              </p>
+              <div class='mt-1 flex flex-row items-center gap-x-2 sm:gap-x-3'>
                 {project.links.map((link) => {
                   const icon = projectIconSet[link.type]
                   return (
                     <a
                       href={link.href}
-                      class='rounded-full bg-muted p-1 text-muted-foreground transition-colors sm:p-1.5'
-                      aria-label={link.type}
+                      class='rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground sm:p-1.5'
+                      aria-label={`${project.name} ${link.type}`}
                       target='_blank'
+                      rel='noreferrer'
                     >
                       <Icon class='size-5' name={icon} />
                     </a>
@@ -94,7 +94,7 @@ const projectIconSet: Record<string, IconsType> = {
                 })}
               </div>
             </div>
-          </div>
+          </article>
         )
       })
     }
