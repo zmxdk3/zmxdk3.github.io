@@ -9,7 +9,7 @@ tags:
   - OpenVLA
   - Embodied-AI
 heroImage:
-  src: './week2-RT2-OpenVLA-assets\training-recipes.svg'
+  src: './week2-RT2-OpenVLA-assets/training-recipes.svg'
   alt: 'training-recipes'
   color: '#4891B2'
 language: 'Chinese'
