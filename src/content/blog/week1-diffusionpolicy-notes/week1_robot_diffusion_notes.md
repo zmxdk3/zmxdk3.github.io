@@ -5,7 +5,7 @@ publishDate: '2026-09-29'
 tags:
   - diffusion-policy
   - robot-learning
-  - embodied-ai
+  - Embodied-AI
 heroImage:
   src: './DiffusionPolicymodel.png'
   alt: 'Diffusion Policy 模型示意图'

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="490" viewBox="0 0 1100 490" role="img" aria-label="RT-2 与 OpenVLA 训练路径比较">
+  <rect width="1100" height="490" fill="#fbfcff"/>
+  <text x="550" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#172b4d" font-family="Noto Sans CJK SC,Microsoft YaHei,sans-serif">RT-2 与 OpenVLA：从预训练 VLM 到机器人策略</text>
+  <rect x="385" y="67" width="330" height="65" rx="12" fill="#263d66"/>
+  <text x="550" y="94" text-anchor="middle" fill="white" font-size="19" font-weight="bold">Pretrained VLM</text>
+  <text x="550" y="119" text-anchor="middle" fill="#dce8ff" font-size="14">已经具备视觉与语言知识</text>
+  <path d="M495 132 V160 H280 V176 M605 132 V160 H820 V176" fill="none" stroke="#8da2bf" stroke-width="3"/>
+  <path d="M273 167 L280 178 L287 167 M813 167 L820 178 L827 167" fill="none" stroke="#8da2bf" stroke-width="3"/>
+  <rect x="73" y="180" width="415" height="228" rx="16" fill="#eaf3ff" stroke="#a9c9fb" stroke-width="2"/>
+  <text x="280" y="214" text-anchor="middle" font-weight="700" font-size="22" fill="#1251aa">RT-2</text>
+  <rect x="127" y="237" width="307" height="48" rx="9" fill="white" stroke="#92b3e0"/>
+  <text x="280" y="266" text-anchor="middle" font-size="18" fill="#183d75">Web Data + Robot Data</text>
+  <text x="280" y="313" text-anchor="middle" font-size="18" fill="#2c4f83">Co-Fine-Tuning（联合微调）</text>
+  <path d="M280 321 V348" stroke="#5788cb" stroke-width="3"/>
+  <path d="M272 339 L280 350 L288 339" fill="none" stroke="#5788cb" stroke-width="3"/>
+  <text x="280" y="381" text-anchor="middle" font-size="15" fill="#243d60">保留 Web 语义能力 + 学机器人动作</text>
+  <rect x="612" y="180" width="415" height="228" rx="16" fill="#eaf9f2" stroke="#a7dabc" stroke-width="2"/>
+  <text x="820" y="214" text-anchor="middle" font-weight="700" font-size="22" fill="#157b50">OpenVLA</text>
+  <rect x="667" y="237" width="305" height="48" rx="9" fill="white" stroke="#99d0b2"/>
+  <text x="820" y="266" text-anchor="middle" font-size="18" fill="#225a43">970k Robot Episodes</text>
+  <text x="820" y="313" text-anchor="middle" font-size="18" fill="#286b4d">Fine-Tuning（机器人数据微调）</text>
+  <path d="M820 321 V348" stroke="#57a67d" stroke-width="3"/>
+  <path d="M812 339 L820 350 L828 339" fill="none" stroke="#57a67d" stroke-width="3"/>
+  <text x="820" y="381" text-anchor="middle" font-size="15" fill="#285443">在 Prismatic VLM 基础上学习动作</text>
+  <text x="550" y="448" text-anchor="middle" font-size="16" fill="#56667f">两者都把动作表示为 token，但 VLA 阶段的数据配方不同</text>
+  <text x="550" y="471" text-anchor="middle" font-size="12" fill="#8391a3">学习整理示意图 · 非论文原图</text>
+</svg>
